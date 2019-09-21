@@ -1,0 +1,163 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.link{
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.regform{
+  width: 25vw;
+}
+.form-inputs{
+  width: 100%;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.btns{
+  width: 100%;
+  color: white;
+  background: black;
+  border: none;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+.btns:hover{
+  background: white;
+  color: black;
+  border: 0.5px solid black;
+}
+
+.blue{
+  color: blue;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center; 
+}
+
+.text{
+  background: #333;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 3.5rem 0;
+}
+
+
+
+.home{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  width: 70%;
+  margin: auto;
+}
+
+@media(max-width: 860px){
+  .home{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem; 
+    width: 70%;   
+  }  
+}
+.contactsform{
+  margin-top: 2rem;
+}
+
+.contactcard{
+  background: #f4f4f4;
+  
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.carddetail{
+  padding: 1rem ;
+}
+
+.top .headings{
+  color: blue;
+  font-size: 1.2rem;
+}
+
+.top .badges {
+  background: blue;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0.4rem 0.7rem;
+}
+
+.btns-dark{
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: black;
+  color: white;
+  margin-right: 0.4rem;
+}
+
+
+.btns-danger:hover, .btns-dark:hover {
+  opacity: 0.6;
+}
+
+.btns-danger{
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: red;
+  color: white;
+  margin-right: 1rem;
+  outline: none;
+}
+
+.btn-simple{
+  background: #f4f4f4;
+  color: black;
+}
+
+.background-danger{
+  background: red;
+  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.background-success{
+  background: green;
+  color: white;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.alert-msg{
+  padding: 0.5rem;
+}
