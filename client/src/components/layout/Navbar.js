@@ -38,21 +38,12 @@ const notAuthenticated = (
         <nav className="navbar navbar-default bg-dark" style={{display: 'flex', justifyContent: 'space-between'}}>
           <div className="navbar-header">
           <h3 >
-              <Link to ='/' className="link">
+              <span  className="link">
               Contact Keeper
-              </Link>
+              </span>
           </h3>
           </div> 
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
-          {/* <Link to ='/register' className="link">
-             Register
-          </Link>
-          <Link to='/login' className="link">
-             Login
-          </Link>
-          <Link to='/about' className="link">
-             About 
-          </Link> */}
           {isAuthenticated === true ? authenticated : notAuthenticated}
           </div>
         </nav>
