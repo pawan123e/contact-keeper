@@ -1,12 +1,18 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import ContactFilter from './ContactFilter'
 import ContactItem from './ContactItem'
 import ContactContext from '../../context/contact/contactContext'
+import Spinner from '../layout/Spinner'
 const ContactList = () => {
 
     const contactContext = useContext(ContactContext);
-    const {contacts, filtered} = contactContext;
-    if(contacts.length === 0){
+    const {contacts, filtered, getContacts, loading} = contactContext;
+
+    useEffect(() => {
+        getContacts();
+    },[])
+
+    if(contacts !== null && contacts.length === 0){
         return ( 
         <div>
         <ContactFilter/>
@@ -17,11 +23,14 @@ const ContactList = () => {
     else return (
         <div>
             <ContactFilter/>
-            {filtered !== null ? filtered.map(contact => (
-                <ContactItem key={contact.id} contact={contact}/>
+            {contacts !== null && !loading ? 
+            (filtered !== null ? filtered.map(contact => (
+                <ContactItem key={contact._id} contact={contact}/>
             )) : contacts.map(contact => (
-                <ContactItem key={contact.id} contact={contact}/>
-            ))}
+                <ContactItem key={contact._id} contact={contact}/>
+            ))) :( <Spinner/>)
+        }
+            
             <br/>
         </div>
     )

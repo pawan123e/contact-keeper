@@ -18,3 +18,17 @@ exports.createContact = AsyncError(async (req, res, next) =>{
           contact
       })
 })
+
+exports.deleteContact = AsyncError(async (req, res, next) => {
+    await Contact.findByIdAndDelete(req.params.id);
+    res.json({
+        status: 'success'
+    })
+})
+
+exports.updateContact = AsyncError(async (req, res, next) => {
+    await Contact.findByIdAndUpdate(req.params.id, req.body);
+    res.json({
+        status: 'success'
+    })
+})
