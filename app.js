@@ -9,9 +9,9 @@ app.use('/api/users', require('./routes/userRoutes'))
 app.use('/api/contacts', require('./routes/contactRoutes'))
 
 
-app.all('*', (req, res, next) =>{
-    next(new AppError('You are accesing wrong route', 404));
-})
+// app.all('*', (req, res, next) =>{
+//     next(new AppError('You are accesing wrong route', 404));
+// })
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
