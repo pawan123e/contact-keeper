@@ -83,7 +83,14 @@ body{
     grid-gap: 2rem; 
     width: 70%;   
   }  
+  
+  .login-page {
+    width: '60%';
+    margin: 'auto';
+  }
+
 }
+
 .contactsform{
   margin-top: 2rem;
 }
@@ -160,4 +167,9 @@ body{
 
 .alert-msg{
   padding: 0.5rem;
+}
+
+.login-page {
+  width: '30%';
+  margin: 'auto';
 }

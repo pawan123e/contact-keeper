@@ -33,7 +33,7 @@ const Login = props => {
         loginUser(user);
     }
     return (
-        <div className="mt-4" style={{width: '30%', margin: 'auto'}}>
+        <div className="mt-4 login-page" >
             <h3>Account <span className="blue">Login</span></h3>
             <br/>
             <form onSubmit={onSubmit}>
