@@ -41,10 +41,10 @@ const Register = props => {
     }
 
     return (
-        <div className="d-flex flex-column align-items-center mt-5">
+        <div className=" mt-5 register-page">
             <h3>Account <span className="blue">Register</span></h3>
             <br/>
-            <form onSubmit={onSubmit} className="regform">
+            <form onSubmit={onSubmit} >
                 <label >Name</label>
                <input  type="text" name="name" className="form-inputs" value={name} onChange={onChange} required/>
                <label >Email</label>

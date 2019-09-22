@@ -35,7 +35,7 @@ const notAuthenticated = (
           </Link>
     </>)
     return (
-        <nav className="navbar navbar-default bg-dark" style={{display: 'flex', justifyContent: 'space-between'}}>
+        <nav className="navbar navbar-default bg-dark navs" style={{display: 'flex', justifyContent: 'space-between'}}>
           <div className="navbar-header">
           <h3 >
               <span  className="link">
@@ -43,7 +43,7 @@ const notAuthenticated = (
               </span>
           </h3>
           </div> 
-          <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <div className="navlinks" style={{display: 'flex', justifyContent: 'space-between'}}>
           {isAuthenticated === true ? authenticated : notAuthenticated}
           </div>
         </nav>
