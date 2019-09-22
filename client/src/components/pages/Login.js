@@ -34,7 +34,7 @@ const Login = props => {
     }
     return (
         <div className="mt-4 login-page" >
-            <h3>Account <span className="blue">Login</span></h3>
+            <h3 className="text-center">Account <span className="blue">Login</span></h3>
             <br/>
             <form onSubmit={onSubmit}>
                <label >Email</label>

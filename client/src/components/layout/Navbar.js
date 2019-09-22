@@ -15,10 +15,6 @@ const authenticated = (
           <a href="" className="link" onClick={logout}>
              <i className="fas fa-sign-out-alt"></i>Logout 
           </a>  
-
-          <Link to='/about' className="link">
-             About 
-          </Link>
     </>       )
 
 

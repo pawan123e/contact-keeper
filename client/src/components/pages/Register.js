@@ -42,7 +42,7 @@ const Register = props => {
 
     return (
         <div className=" mt-5 register-page">
-            <h3>Account <span className="blue">Register</span></h3>
+            <h3 className="text-center">Account <span className="blue">Register</span></h3>
             <br/>
             <form onSubmit={onSubmit} >
                 <label >Name</label>
