@@ -20,11 +20,11 @@ exports.register =catchAsync (async(req, res, next) =>{
 exports.signIn = catchAsync(async (req, res, next) =>{
     const {email, password} = req.body;
     if(!email || !password){
-      return next(new AppError('Enter a valid email or password', 401))
+      return next(new AppError('Invalid credentials', 401))
     }
     const user = await User.findOne({email}).select('+password');
     if(!user || !(await user.checkPassword(password, user.password))){
-        return next(new AppError('Invalid email address or password', 400))
+        return next(new AppError('Invalid credentials', 400))
     }
     const token = await jwt.sign({id: user._id}, process.env.SECRET_KEY, {expiresIn: '3d'})
     res.status(200).json({
